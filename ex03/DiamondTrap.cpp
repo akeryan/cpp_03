@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 19:57:01 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/17 07:00:19 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/17 09:45:23 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,16 @@ DiamondTrap::~DiamondTrap()
 	std::cout << "DiamondTrap destructor called" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(std::string name): FlagTrap(name), name(name + "_clap_name") 
+DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name"), FragTrap(name), name(name)
 {
+	std::cout << "DiamondTrap constructor called" << std::endl;
+	this->hitPoints = FragTrap::hitPoints;
+	this->energyPoints = ScavTrap::energyPoints;
+	this->attackDamage = FragTrap::attackDamage;
+}
 
+void DiamondTrap::printStatus(void) {
+	std::cout << "Stats for DiamondTrap " << this->name << " ---------------------------" << std::endl;
+	std::cout << "Diamond name:\t" << this->name << std::endl;
+	ClapTrap::printStatus();
 }

@@ -6,45 +6,45 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 18:12:41 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/17 06:57:04 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/17 09:29:59 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FlagTrap.hpp"
+#include "FragTrap.hpp"
 #include <iostream>
 
-FlagTrap::FlagTrap(): ClapTrap()
+FragTrap::FragTrap(): ClapTrap()
 {
-	std::cout << "FlagTrap default constructor called" << std::endl;
+	std::cout << "FragTrap default constructor called" << std::endl;
 }
 
-FlagTrap::FlagTrap(std::string name): ClapTrap(name)
+FragTrap::FragTrap(std::string name): ClapTrap(name)
 {
 	hitPoints = 100;
 	energyPoints = 100;
 	attackDamage = 30;
-	std::cout << "FlagTrap constructor for " << this->name << " is called" << std::endl;
+	std::cout << "FragTrap constructor for " << this->name << " is called" << std::endl;
 }
 
-FlagTrap::FlagTrap(const FlagTrap &obj): ClapTrap(obj)
+FragTrap::FragTrap(const FragTrap &obj): ClapTrap(obj)
 { 
-	std::cout << "FlagTrap copy constructor for " << this->name << " is called" << std::endl;
+	std::cout << "FragTrap copy constructor for " << this->name << " is called" << std::endl;
 }
 
-const FlagTrap &FlagTrap::operator=(const FlagTrap &obj)
+const FragTrap &FragTrap::operator=(const FragTrap &obj)
 {
-	std::cout << "FlagTrap's copy assignment operator called" << std::endl;
+	std::cout << "FragTrap's copy assignment operator called" << std::endl;
 	if (this != &obj)
 		ClapTrap::operator=(obj);
 	return *this;
 }
 
-FlagTrap::~FlagTrap()
+FragTrap::~FragTrap()
 {
-	std::cout << "FlagTrap " << this->name << " destructor called" << std::endl;
+	std::cout << "FragTrap " << this->name << " destructor called" << std::endl;
 }
 
-void FlagTrap::highFiveGuys(void)
+void FragTrap::highFiveGuys(void)
 {
-	std::cout << "FlagTrap " << this->name << " is asking for high five" << std::endl;
+	std::cout << "FragTrap " << this->name << " is asking for high five" << std::endl;
 }

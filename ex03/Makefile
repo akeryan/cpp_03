@@ -6,7 +6,7 @@
 #    By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/04 14:39:51 by akeryan           #+#    #+#              #
-#    Updated: 2024/05/17 06:52:59 by akeryan          ###   ########.fr        #
+#    Updated: 2024/05/17 09:29:59 by akeryan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,12 +19,12 @@ RM = rm -rf
 SRC_FILES = main.cpp		\
 			ClapTrap.cpp	\
 			ScavTrap.cpp	\
-			FlagTrap.cpp	\
+			FragTrap.cpp	\
 			DiamondTrap.cpp	
 
 INCLUDE_FILES = ClapTrap.hpp	\
 				ScavTrap.hpp	\
-				FlagTrap.hpp	\
+				FragTrap.hpp	\
 				DiamondTrap.hpp	
 
 OBJ = $(patsubst %.cpp, %.o, $(SRC_FILES))

@@ -6,14 +6,14 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 19:22:05 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/17 08:00:59 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/17 09:12:41 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include <iostream>
 
-ClapTrap::ClapTrap(): name("Default")
+ClapTrap::ClapTrap(): name("Default"), hitPoints(0), energyPoints(0), attackDamage(0)
 {
 	std::cout << "ClapTrap default constructor called" << std::endl;
 }
@@ -83,7 +83,6 @@ void ClapTrap::setName(const std::string name)
 
 void ClapTrap::printStatus(void)
 {
-	std::cout << "Stats for ClapTrap " << this->name << " ---------------------------" << std::endl;
 	std::cout << "name:\t\t" << this->name << std::endl;
 	std::cout << "hit points:\t" << this->hitPoints << std::endl;
 	std::cout << "energy points:\t" << this->energyPoints << std::endl;

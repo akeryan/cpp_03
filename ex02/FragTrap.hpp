@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 18:03:51 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/17 06:54:32 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/17 09:29:59 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 
 # include "ClapTrap.hpp"
 
-class FlagTrap: virtual public ClapTrap
+class FragTrap: public ClapTrap
 {
 	public:
-		FlagTrap();
-		FlagTrap(std::string name);
-		FlagTrap(const FlagTrap &obj);
-		~FlagTrap();
-		const FlagTrap &operator=(const FlagTrap &obj);
+		FragTrap();
+		FragTrap(std::string name);
+		FragTrap(const FragTrap &obj);
+		~FragTrap();
+		const FragTrap &operator=(const FragTrap &obj);
 		void highFiveGuys(void);
 };
 
