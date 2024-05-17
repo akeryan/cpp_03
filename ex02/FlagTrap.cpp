@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 18:12:41 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/17 06:44:41 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/17 06:57:04 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 FlagTrap::FlagTrap(): ClapTrap()
 {
-	std::cout << "FlagTrap default constructor called";
+	std::cout << "FlagTrap default constructor called" << std::endl;
 }
 
 FlagTrap::FlagTrap(std::string name): ClapTrap(name)

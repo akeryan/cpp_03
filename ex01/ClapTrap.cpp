@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 19:22:05 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/17 06:43:00 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/17 07:58:33 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,17 @@ void ClapTrap::setName(const std::string name)
 	if (name != "")
 		this->name = name;
 }
+
+void ClapTrap::printStatus(void)
+{
+	std::cout << "Stats for ClapTrap " << this->name << " ---------------------------" << std::endl;
+	std::cout << "name:\t\t" << this->name << std::endl;
+	std::cout << "hit points:\t" << this->hitPoints << std::endl;
+	std::cout << "energy points:\t" << this->energyPoints << std::endl;
+	std::cout << "attack damage:\t" << this->attackDamage << std::endl;
+	std::cout <<  "------------------------------------------------" << std::endl;
+}
+
 		
 
 

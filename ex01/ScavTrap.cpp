@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 16:25:39 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/17 06:42:31 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/17 06:56:45 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 ScavTrap::ScavTrap(): ClapTrap()
 {
-	std::cout << "ScavTrap default constructor called";
+	std::cout << "ScavTrap default constructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name)

@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 14:53:07 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/16 20:41:09 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/17 06:55:11 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 class ScavTrap: virtual public ClapTrap 
 {
 	public:
+		ScavTrap();
 		ScavTrap(std::string name);
 		ScavTrap(const ScavTrap &obj);
 		~ScavTrap();
