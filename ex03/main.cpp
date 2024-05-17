@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 19:45:51 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/17 12:53:39 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/17 15:26:19 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ int main()
 	FragTrap f("frag");
 	f.printStatus();
 
-	DiamondTrap a("Aram");	
+	DiamondTrap a("Aram"), h(a);	
 	a.printStatus();
+	h.setName("Copy");
+	h.printStatus();
 	a.attack("Enemy");
 	a.beRepaired(17);
 	a.takeDamage(9);
@@ -34,6 +36,9 @@ int main()
 	a.highFiveGuys();
 
 	a.whoAmI();
+
+	h = a;
+	h.printStatus();
 
 	return 0;
 }

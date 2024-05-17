@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 19:57:01 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/17 10:51:07 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/17 15:24:09 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,15 @@ DiamondTrap::~DiamondTrap()
 	std::cout << "DiamondTrap " << this->name << " destructor called" << std::endl;
 }
 
+DiamondTrap::DiamondTrap(const DiamondTrap &obj): ClapTrap(obj)
+{ 
+	this->name = obj.name;
+	std::cout << "DiamondTrap copy constructor for " << this->name << " is called" << std::endl;
+}
+
 DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name), name(name)
 {
-	std::cout << "DiamondTrap constructor called" << std::endl;
+	std::cout << "DiamondTrap constructor for " << this->name << " is called" << std::endl;
 	this->FragTrap::setHitPoints();
 	this->ScavTrap::setEnergyPoints();
 	this->FragTrap::setAttackDamage();
@@ -46,4 +52,23 @@ void DiamondTrap::printStatus(void) {
 void DiamondTrap::whoAmI(void)
 {
 	std::cout << "whoAmI? " << "My DiamondTrap name is: " << this->name << "; my ClapTrap name is: " << this->ClapTrap::name << std::endl; 
+}
+
+void DiamondTrap::setName(const std::string name)
+{
+	std::cout << "DiamondTrap's setName called: " << this->name << " -> " << name << std::endl;
+	if (name != "") {
+		this->name = name;
+		this->ClapTrap::name = this->name + "_clap_name";
+	}
+}
+
+const DiamondTrap &DiamondTrap::operator=(const DiamondTrap &obj)
+{
+	std::cout << "DiamondTrap's copy assignment operator called" << std::endl;
+	if (this != &obj) {
+		this->name = obj.name;
+		ClapTrap::operator=(obj);
+	}
+	return *this;
 }
