@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/11 19:45:51 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/16 18:00:36 by akeryan          ###   ########.fr       */
+/*   Created: 2024/05/16 19:25:44 by akeryan           #+#    #+#             */
+/*   Updated: 2024/05/17 06:45:00 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include <iostream>
+#ifndef DIAMOND_TRAP_HPP
+# define DIAMOND_TRAP_HPP
 
-int main()
+# include "FlagTrap.hpp"
+# include "ScavTrap.hpp"
+
+class DiamondTrap: public FlagTrap, public ScavTrap
 {
-	ClapTrap a("A"), b("B"), c(a);
-	c.setName("C");
-	c.attack("B");
-	b.takeDamage(5);
-	a.beRepaired(6);	
+	public:
+	 	DiamondTrap();
+		DiamondTrap(std::string name);
+	private:
+		std::string name;
+};
 
-	return 0;
-}
+#endif

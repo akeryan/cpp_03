@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/11 19:45:51 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/16 18:00:36 by akeryan          ###   ########.fr       */
+/*   Created: 2024/05/16 19:57:01 by akeryan           #+#    #+#             */
+/*   Updated: 2024/05/17 06:48:02 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
 #include <iostream>
+#include "DiamondTrap.hpp"
 
-int main()
+DiamondTrap::DiamondTrap(): ClapTrap()
 {
-	ClapTrap a("A"), b("B"), c(a);
-	c.setName("C");
-	c.attack("B");
-	b.takeDamage(5);
-	a.beRepaired(6);	
+	this->name = ClapTrap::name + "_clap_name";
+	std::cout << "DiamondTrap default constructor called" << std::endl;
+}
 
-	return 0;
+DiamondTrap::DiamondTrap(std::string name): FlagTrap(name), name(name + "_clap_name") 
+{
+
 }

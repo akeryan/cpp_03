@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FlagTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/11 19:45:51 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/16 18:00:36 by akeryan          ###   ########.fr       */
+/*   Created: 2024/05/16 18:03:51 by akeryan           #+#    #+#             */
+/*   Updated: 2024/05/17 06:44:04 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include <iostream>
+#ifndef FLAG_TRAP_HPP
+# define FLAG_TRAP_HPP
 
-int main()
+# include "ClapTrap.hpp"
+
+class FlagTrap: public ClapTrap
 {
-	ClapTrap a("A"), b("B"), c(a);
-	c.setName("C");
-	c.attack("B");
-	b.takeDamage(5);
-	a.beRepaired(6);	
+	public:
+		FlagTrap();
+		FlagTrap(std::string name);
+		FlagTrap(const FlagTrap &obj);
+		~FlagTrap();
+		const FlagTrap &operator=(const FlagTrap &obj);
+		void highFiveGuys(void);
+};
 
-	return 0;
-}
+#endif
