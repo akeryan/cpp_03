@@ -6,15 +6,18 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 19:22:05 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/17 09:12:41 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/17 10:08:36 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include <iostream>
 
-ClapTrap::ClapTrap(): name("Default"), hitPoints(0), energyPoints(0), attackDamage(0)
+ClapTrap::ClapTrap(): name("Default")
 {
+	setHitPoints();
+	setEnergyPoints();
+	setAttackDamage();
 	std::cout << "ClapTrap default constructor called" << std::endl;
 }
 
@@ -88,5 +91,20 @@ void ClapTrap::printStatus(void)
 	std::cout << "energy points:\t" << this->energyPoints << std::endl;
 	std::cout << "attack damage:\t" << this->attackDamage << std::endl;
 	std::cout <<  "------------------------------------------------" << std::endl;
+}
+
+void ClapTrap::setHitPoints(const unsigned int value)
+{
+	this->hitPoints = value;
+}
+
+void ClapTrap::setEnergyPoints(const unsigned int value)
+{
+	this->energyPoints = value;
+}
+
+void ClapTrap::setAttackDamage(const unsigned int value)
+{
+	this->attackDamage = value;
 }
 

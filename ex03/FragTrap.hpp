@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FlagTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 18:03:51 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/17 09:29:59 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/17 10:22:31 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ class FragTrap: virtual public ClapTrap
 		~FragTrap();
 		const FragTrap &operator=(const FragTrap &obj);
 		void highFiveGuys(void);
+		void setHitPoints(const unsigned int value = 100);
+		void setEnergyPoints(const unsigned int value = 100);
+		void setAttackDamage(const unsigned int value = 30);
 };
 
 #endif

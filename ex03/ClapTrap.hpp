@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 19:11:35 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/17 09:39:54 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/17 10:05:25 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,9 @@ class ClapTrap {
 		void beRepaired(unsigned int amount);
 		void setName(const std::string name);		
 		void virtual printStatus(void);
+		void setHitPoints(const unsigned int value = 10);
+		void setEnergyPoints(const unsigned int value = 10);
+		void setAttackDamage(const unsigned int value = 0);
 
 	protected:
 		std::string	name;

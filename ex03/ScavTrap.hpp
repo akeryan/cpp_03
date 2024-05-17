@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 14:53:07 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/17 06:55:11 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/17 10:23:23 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ class ScavTrap: virtual public ClapTrap
 		const ScavTrap &operator=(const ScavTrap &obj);
 		void attack(const std::string &target);
 		void guardGate();
+		void setHitPoints(const unsigned int value = 100);
+		void setEnergyPoints(const unsigned int value = 50);
+		void setAttackDamage(const unsigned int value = 20);
 };
 
 #endif

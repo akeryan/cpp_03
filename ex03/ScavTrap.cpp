@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 16:25:39 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/17 06:58:29 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/17 10:24:45 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,19 @@ void ScavTrap::attack(const std::string &target)
 	} else {
 		std::cout << "ScavTrap " << this->name << " is out of energyPoints and cannot attack" << std::endl;
 	}
+}
+
+void ScavTrap::setHitPoints(const unsigned int value)
+{
+	this->ClapTrap::setHitPoints(value);	
+}
+
+void ScavTrap::setEnergyPoints(const unsigned int value)
+{
+	this->ClapTrap::setEnergyPoints(value);	
+}
+
+void ScavTrap::setAttackDamage(const unsigned int value)
+{
+	this->ClapTrap::setAttackDamage(value);	
 }

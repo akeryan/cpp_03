@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FlagTrap.cpp                                       :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 18:12:41 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/17 09:29:59 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/17 10:14:12 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ FragTrap::FragTrap(): ClapTrap()
 
 FragTrap::FragTrap(std::string name): ClapTrap(name)
 {
-	hitPoints = 100;
-	energyPoints = 100;
-	attackDamage = 30;
+	setHitPoints();
+	setEnergyPoints();
+	setAttackDamage();
 	std::cout << "FragTrap constructor for " << this->name << " is called" << std::endl;
 }
 
@@ -48,3 +48,19 @@ void FragTrap::highFiveGuys(void)
 {
 	std::cout << "FragTrap " << this->name << " is asking for high five" << std::endl;
 }
+
+void FragTrap::setHitPoints(const unsigned int value)
+{
+	this->ClapTrap::setHitPoints(value);	
+}
+
+void FragTrap::setEnergyPoints(const unsigned int value)
+{
+	this->ClapTrap::setEnergyPoints(value);	
+}
+
+void FragTrap::setAttackDamage(const unsigned int value)
+{
+	this->ClapTrap::setAttackDamage(value);	
+}
+

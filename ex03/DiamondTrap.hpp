@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 19:25:44 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/17 09:45:01 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/17 10:47:53 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ class DiamondTrap: public ScavTrap, public FragTrap
 	 	DiamondTrap();
 		~DiamondTrap();
 		DiamondTrap(std::string name);
+		void attack(const std::string &target);
 		void printStatus(void);
+		void whoAmI(void);
 	private:
 		std::string name;
 };
