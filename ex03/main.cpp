@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 19:45:51 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/17 10:51:25 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/17 12:53:39 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,11 @@ int main()
 	DiamondTrap a("Aram");	
 	a.printStatus();
 	a.attack("Enemy");
+	a.beRepaired(17);
+	a.takeDamage(9);
+
+	a.guardGate();
+	a.highFiveGuys();
 
 	a.whoAmI();
 
