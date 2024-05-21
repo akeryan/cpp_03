@@ -6,13 +6,13 @@
 #    By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/04 14:39:51 by akeryan           #+#    #+#              #
-#    Updated: 2024/05/17 12:57:59 by akeryan          ###   ########.fr        #
+#    Updated: 2024/05/21 18:20:20 by akeryan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = exec 
 
-CXFLAGS =  -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
+CXXFLAGS =  -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
 CXX = c++
 RM = rm -rf
 
