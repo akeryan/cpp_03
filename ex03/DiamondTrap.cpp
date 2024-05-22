@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 19:57:01 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/17 15:24:09 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/22 08:54:37 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ DiamondTrap::DiamondTrap(const DiamondTrap &obj): ClapTrap(obj)
 	std::cout << "DiamondTrap copy constructor for " << this->name << " is called" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name), name(name)
+DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name"), name(name)
 {
 	std::cout << "DiamondTrap constructor for " << this->name << " is called" << std::endl;
 	this->FragTrap::setHitPoints();
